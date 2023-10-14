@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Contact | TastyBite</title>
+
+    <style>
+        main{
+            background-color: #fce9e9;
+        }
+        #contact-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #short-desc {
+            flex: 1;
+            padding: 50px;
+            border-radius: 5px;
+            
+        }
+        #short-desc h1{
+            font-size: 3rem;
+            padding: 12px;
+            color: #212121;
+        }
+        #short-desc p{
+            font-size: 1.2rem;
+            padding: 12px;
+            text-align: justify;
+            color: #212121;
+        }
+        #short-desc button{
+            background-color: #008000;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 3px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #short-desc button:hover{
+            background-color: #212121;
+            color: white;
+        }
+
+        #contact-form {
+            flex: 1;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: #212121;
+        }
+        #contact-form h2{
+            padding: 10px;
+            font-size: 2rem;
+            color: #f2f2f2;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            margin: 5px 0;
+            outline: 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #submit-btn {
+            background-color: #008000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #submit-btn:hover {
+            background-color: royalblue;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            #contact-container {
+            display: block;
+        }
+        #short-desc{
+         padding: 20px; 
+        }
+        #short-desc h1{
+         font-size: 2rem; 
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">Tasty<span>Bite</span></a>
+        </div>
+        <div id="nav-menu">
+            <ul>
+                <li><a  href="index.html">home</a></li>
+                <li><a  href="recipes.html">recipes</a></li>
+                <li><a href="search.html">search</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a class="active" href="contact.html">contact</a></li>
+            </ul>
+        </div>
+        <div class="right-side">
+            <span id="search-close-btn" class="material-symbols-outlined">search</span>
+            <button class="join-btn"><a href="join-us.html">Join Us</a></button>
+            <span id="account_circle" class="material-symbols-outlined">account_circle</span>
+            <span id="mobile-btn" class="material-symbols-outlined">menu</span>
+        </div>
+    </header>
+
+    <div class="center-search">
+        <div id="searchAbs">
+            <input type="text" name="search" placeholder="Search recipes...">
+            <span class="material-symbols-outlined">search</span>
+        </div>
+    </div>
+
+<main>
+   
+    <div id="contact-container">
+        <div id="short-desc">
+            <h1>Hello, what's on your mind?</h1>
+            <p>Have questions or feedback? We'd love to hear from you! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolor consequuntur veniam quo consectetur voluptatem unde reiciendis expedita neque incidunt? Fuga doloribus incidunt ipsam id. Reiciendis libero officiis nulla similique.</p>
+
+            <button type="submit">Schedule a Call</button>
+        </div>
+
+        <div id="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <input type="text" placeholder="Name...">
+                <input type="text" placeholder="Email...">
+                <textarea name="comment" placeholder="Message..." cols="30" rows="5"></textarea>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <section id="subscribe">
+        <div class="newsletter">
+            <h1>Subscribe Us!</h1>
+            <p>Be the first to know about the latest deals, receive new trending recipes & more!</p>
+                <input type="text" placeholder="Enter your email...">
+            <button type="submit">Submit</button>            
+        </div>
+    </section>
+
+
+</main>
+
+    <section>
+        <footer class="footer">
+            <ul class="social-icons">
+                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                <li><a href="#"><i class="ri-instagram-fill"></i></li>
+                <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+            </ul>
+            <p>&copy; 2023 <strong>TastyBite</strong> | All rights reserved.</p>
+        </footer>
+    </section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
