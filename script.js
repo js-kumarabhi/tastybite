@@ -33,28 +33,6 @@ mobileBtn.addEventListener("click", function () {
     }
 });
 
-// hero images effect
-// const imageContainer = document.getElementById('image-container');
-// const rotateImage = document.getElementById('rotate-image');
-
-// imageContainer.addEventListener('mousemove', (e) => {
-//     const { clientX, clientY } = e;
-//     const { left, top, width, height } = imageContainer.getBoundingClientRect();
-//     const centerX = left + width / 2;
-//     const centerY = top + height / 2;
-
-//     const deltaX = clientX - centerX;
-//     const deltaY = centerY - clientY;
-
-//     const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-
-//     rotateImage.style.transform = `rotate(${angle}deg)`;
-// });
-
-// imageContainer.addEventListener('mouseleave', () => {
-//     // Reset the image rotation when the cursor leaves the container
-//     rotateImage.style.transform = 'rotate(0deg)';
-// });
 
 //  toggle the accordion content
 
@@ -87,8 +65,7 @@ for (var i = 0; i < accordions.length; i++) {
 }
 
 
-
-//  Card animation
+//  Card animation "fading animation on card"
 ScrollTrigger.batch(".recipes-card, .video-thumbnail", {
     interval: 0.1, 
     batchMax: 3,
@@ -117,3 +94,54 @@ ScrollTrigger.batch(".recipes-card, .video-thumbnail", {
     gsap.set(batch, 
         {autoAlpha: 0, overwrite: true }),
     });
+
+
+    
+// login signup
+function handleLogin() {
+    const email = document.getElementById("login-email").value;
+    const password = document.getElementById("login-password").value;
+    // You can add your login logic here
+    if (email === "user@example.com" && password === "password") {
+      alert("Login successful");
+      window.location.href = "home.html";
+    } else {
+      alert("Login failed");
+    }
+    return false; 
+  }
+  
+  function handleSignup() {
+    const signupEmail = document.getElementById("signup-email").value;
+    const signupPassword = document.getElementById("signup-password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+    // You can add your signup logic here
+    if (signupPassword === confirmPassword) {
+      alert("Application doesn't have signup facility, please login!");
+      document.getElementById("login").checked = true;
+    } else {
+      alert("Passwords do not match?");
+    }
+  }
+  
+  //switching loginto signup
+  const loginText = document.querySelector(".title-text .login");
+  const loginForm = document.querySelector("form.login");
+  const loginBtn = document.querySelector("label.login");
+  const signupBtn = document.querySelector("label.signup");
+  const signupLink = document.querySelector("form .signup-link a");
+  
+  signupBtn.onclick = () => {
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+  };
+  
+  loginBtn.onclick = () => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+  };
+  
+  signupLink.onclick = () => {
+    signupBtn.click();
+    return false;
+  };

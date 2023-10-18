@@ -287,58 +287,8 @@
   </div>
 
 
-  <script>
 
-// login signup
-function handleLogin() {
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
-  // You can add your login logic here
-  if (email === "user@example.com" && password === "password") {
-    alert("Login successful");
-    window.location.href = "home.html";
-  } else {
-    alert("Login failed");
-  }
-  return false; 
-}
-
-function handleSignup() {
-  const signupEmail = document.getElementById("signup-email").value;
-  const signupPassword = document.getElementById("signup-password").value;
-  const confirmPassword = document.getElementById("confirm-password").value;
-  // You can add your signup logic here
-  if (signupPassword === confirmPassword) {
-    alert("Application doesn't have signup facility, please login!");
-    document.getElementById("login").checked = true;
-  } else {
-    alert("Passwords do not match?");
-  }
-}
-
-//switching loginto signup
-const loginText = document.querySelector(".title-text .login");
-const loginForm = document.querySelector("form.login");
-const loginBtn = document.querySelector("label.login");
-const signupBtn = document.querySelector("label.signup");
-const signupLink = document.querySelector("form .signup-link a");
-
-signupBtn.onclick = () => {
-  loginForm.style.marginLeft = "-50%";
-  loginText.style.marginLeft = "-50%";
-};
-
-loginBtn.onclick = () => {
-  loginForm.style.marginLeft = "0%";
-  loginText.style.marginLeft = "0%";
-};
-
-signupLink.onclick = () => {
-  signupBtn.click();
-  return false;
-};
-
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
