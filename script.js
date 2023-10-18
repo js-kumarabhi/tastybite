@@ -102,7 +102,7 @@ function handleLogin() {
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
     // You can add your login logic here
-    if (email === "user@example.com" && password === "password") {
+    if (email === "user@example.com" && password === "pass123") {
       alert("Login successful");
       window.location.href = "home.html";
     } else {
